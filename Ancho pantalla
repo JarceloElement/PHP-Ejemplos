@@ -1,0 +1,16 @@
+<!-- RESOLUCION DE PANTALLA -->
+<?php
+  if(!isset($_GET['Ancho']) && !isset($_GET['Alto']) )
+  {
+    $PHP_SELFx = osc_base_url();
+    echo "<script language=\"JavaScript\">
+    <!-- 
+    document.location=\"$PHP_SELFx?Ancho=\"+screen.width+\"&Alto=\"+screen.height;
+    //-->
+    </script>";
+  }
+?>
+
+<?php if($_GET['Ancho'] > $_GET['Alto']){$limite = 6;}  # tipo pantalla
+         else{ $limite = 5;} 
+        ?>
